@@ -1,0 +1,16 @@
+diff -up mame-0.176/src/osd/sdl/sdlprefix.h.fortify mame-0.176/src/osd/sdl/sdlprefix.h
+--- mame-0.176/src/osd/sdl/sdlprefix.h.fortify	2016-07-27 20:25:12.076182355 +0200
++++ mame-0.176/src/osd/sdl/sdlprefix.h	2016-07-27 20:26:29.052947445 +0200
+@@ -75,9 +75,9 @@ struct _IO_FILE {};  //_IO_FILE is an op
+ #endif
+ 
+ // fix for Ubuntu 8.10
+-#ifdef _FORTIFY_SOURCE
+-#undef _FORTIFY_SOURCE
+-#endif
++// #ifdef _FORTIFY_SOURCE
++// #undef _FORTIFY_SOURCE
++// #endif
+ 
+ // nasty hack to stop altivec #define vector/bool/pixel screwing us over
+ #if defined(__ALTIVEC__) && !defined(__APPLE_ALTIVEC__)
