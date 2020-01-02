@@ -26,5 +26,10 @@ pip install sphinxcontrib-svg2pdfconverter
 #do not parallelize
 echo "%_smp_mflags -j1" >> ~/.rpmmacros
 
+#download mame source
+cd SOURCES
+wget https://github.com/mamedev/mame/releases/download/mame0217/mame0217s.exe
+cd ..
+
 #create package
 rpmbuild -bp ~/rpmbuild/SPECS/groovymame.spec
