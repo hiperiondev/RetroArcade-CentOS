@@ -1,6 +1,8 @@
 # RetroArcade-CentOS
 Refer to: https://github.com/TiBeN/15khz-arcade-pkg
 
+-------------------------------------------------------------
+
 REBUILD GROOVYMAME 0.217 (GCC 8.x)
 
 ## packages base
