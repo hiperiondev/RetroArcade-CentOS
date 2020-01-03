@@ -1,0 +1,11 @@
+--- src/drmmode_display.c	2017-04-21 15:47:24.000000000 -0300
++++ src/drmmode_display.c.new	2020-01-03 00:16:51.846503508 -0300
+@@ -1444,7 +1444,7 @@
+ 	if (!drmmode->mode_res)
+ 		return FALSE;
+ 
+-	xf86CrtcSetSizeRange(pScrn, 320, 200, drmmode->mode_res->max_width,
++	xf86CrtcSetSizeRange(pScrn, 160, 100, drmmode->mode_res->max_width,
+ 			     drmmode->mode_res->max_height);
+ 
+ 	if (!drmmode->mode_res->count_connectors ||

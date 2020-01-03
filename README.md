@@ -69,3 +69,19 @@ wget -O ~/rpmbuild/SOURCES/EmulationStation.zip https://codeload.github.com/Alos
 ```
 rpmbuild -ba ~/rpmbuild/SPECS/EmulationStation.spec
 ```
+
+--------------------------------------
+
+# REBUILD NOUVEAU LOW-RES PATCH
+
+## packages base
+```
+yum install systemd-devel xorg-x11-server-devel libtoo
+```
+
+## build package
+```
+rpmbuild -ba ~/rpmbuild/SPECS/xorg-x11-drv-nouveau.spec
+```
+
+
