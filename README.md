@@ -1,6 +1,7 @@
 # RetroArcade-CentOS
+Refer to: https://github.com/TiBeN/15khz-arcade-pkg
 
-REBUILD GROOVYMAME 0.216 CENTOS 7 (GCC 8.x)
+REBUILD GROOVYMAME 0.217 (GCC 8.x)
 
 ## packages base
 ```
@@ -72,7 +73,7 @@ rpmbuild -ba ~/rpmbuild/SPECS/EmulationStation.spec
 
 --------------------------------------
 
-# REBUILD NOUVEAU LOW-RES PATCH
+# REBUILD NOUVEAU LOW-RES PATCH (GCC 4.x)
 
 ## packages base
 ```
