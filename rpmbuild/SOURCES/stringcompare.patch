@@ -1,0 +1,59 @@
+Index: es-core/src/Window.cpp
+===================================================================
+--- es-core/src/Window.cpp.orig
++++ es-core/src/Window.cpp
+@@ -274,8 +274,8 @@ void Window::setHelpPrompts(const std::v
+ 				// yes, it has!
+ 
+ 				// can we combine? (dpad only)
+-				if((it->first == "up/down" && addPrompts.at(mappedTo->second).first == "left/right") ||
+-					(it->first == "left/right" && addPrompts.at(mappedTo->second).first == "up/down"))
++				if((strcmp((it->first) , "up/down")) == 0 && strcmp(addPrompts.at(mappedTo->second).first , "left/right") == 0 ||
++					(strcmp((it->first) , "left/right") == 0 && strcmp(addPrompts.at(mappedTo->second).first , "up/down")) == 0)
+ 				{
+ 					// yes!
+ 					addPrompts.at(mappedTo->second).first = "up/down/left/right";
+Index: es-core/src/components/ComponentGrid.cpp
+===================================================================
+--- es-core/src/components/ComponentGrid.cpp.orig
++++ es-core/src/components/ComponentGrid.cpp
+@@ -430,15 +430,15 @@ std::vector<HelpPrompt> ComponentGrid::g
+ 	bool canScrollHoriz = mGridSize.x() > 1;
+ 	for(auto it = prompts.begin(); it != prompts.end(); it++)
+ 	{
+-		if(it->first == "up/down/left/right")
++		if(strcmp((it->first) , "up/down/left/right") == 0)
+ 		{
+ 			canScrollHoriz = false;
+ 			canScrollVert = false;
+ 			break;
+-		}else if(it->first == "up/down")
++		}else if(strcmp ((it->first) , "up/down") == 0)
+ 		{
+ 			canScrollVert = false;
+-		}else if(it->first == "left/right")
++		}else if(strcmp ((it->first) , "left/right") == 0)
+ 		{
+ 			canScrollHoriz = false;
+ 		}
+Index: es-core/src/components/ComponentList.cpp
+===================================================================
+--- es-core/src/components/ComponentList.cpp.orig
++++ es-core/src/components/ComponentList.cpp
+@@ -1,6 +1,7 @@
+ #include "components/ComponentList.h"
+ #include "Util.h"
+ #include "Log.h"
++#include <string.h>
+ 
+ #define TOTAL_HORIZONTAL_PADDING_PX 20
+ 
+@@ -318,7 +319,7 @@ std::vector<HelpPrompt> ComponentList::g
+ 		bool addMovePrompt = true;
+ 		for(auto it = prompts.begin(); it != prompts.end(); it++)
+ 		{
+-			if(it->first == "up/down" || it->first == "up/down/left/right")
++			if(strcmp((it->first) , "up/down") == 0 || strcmp((it->first) , "up/down/left/right") == 0)
+ 			{
+ 				addMovePrompt = false;
+ 				break;
