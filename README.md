@@ -73,7 +73,7 @@ rpmbuild -ba ~/rpmbuild/SPECS/EmulationStation.spec
 
 --------------------------------------
 
-# REBUILD NOUVEAU LOW-RES PATCH (GCC 4.x)
+REBUILD NOUVEAU LOW-RES PATCH (GCC 4.x)
 
 ## packages base
 ```
