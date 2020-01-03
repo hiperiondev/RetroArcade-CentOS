@@ -52,20 +52,20 @@ rpmbuild -ba ~/rpmbuild/SPECS/groovymame.spec
 
 --------------------
 
-# REBUILD EMULATIONSTATION (GCC 4.x)
+REBUILD EMULATIONSTATION (GCC 4.x)
 
-# packages base
+## packages base
 ```
 yum groupinstall -y "Development Tools"
 yum install -y alsa-lib alsa-lib-devel SDL2-devel boost-system boost-filesystem boost-date-time boost-locale freeimage-devel boost-devel freetype-devel eigen3-devel.noarch libcurl-devel mesa-libGL-devel cmake git
 ```
 
-# download source
+## download source
 ```
 wget -O ~/rpmbuild/SOURCES/EmulationStation.zip https://codeload.github.com/Aloshi/EmulationStation/zip/master
 ```
 
-# build package
+## build package
 ```
 rpmbuild -ba ~/rpmbuild/SPECS/EmulationStation.spec
 ```
