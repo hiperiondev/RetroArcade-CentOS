@@ -86,7 +86,7 @@ rpmbuild -ba ~/rpmbuild/SPECS/xorg-x11-drv-nouveau.spec
 ```
 --------------------------------------
 
-## REBUILD KERNEL WITH LOW RES PATCH (GCC 4.X)
+## REBUILD KERNEL WITH LOW RES PATCH (GCC 4.X) [https://github.com/Ansa89/linux-15khz-patch]
 
 packages base
 ```
