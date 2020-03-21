@@ -1,4 +1,7 @@
 # RetroArcade-CentOS
+
+PRECOMPILED PACKAGES: https://mega.nz/#F!tyYRFQpR!3zIwc-7gRe3li1hJJU0suw
+
 Refer to: https://github.com/TiBeN/15khz-arcade-pkg
 
 -------------------------------------------------------------
