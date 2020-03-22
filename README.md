@@ -100,3 +100,19 @@ build package
 ```
 rpmbuild -ba ~/rpmbuild/SPECS/kernel.spec
 ```
+--------------------------------------
+
+## PROBLEMS/ERRORS
+
+### Gamepad not detected:
+
+Create a file /etc/udev/rules.d/99-gamepad.rules with the content
+```
+SUBSYSTEM=="input", ATTRS{name}=="NAME OF DEVICE", MODE="0666", ENV{ID_INPUT_JOYSTICK}="1"
+```
+Replacing NAME OF DEVICE with the fullname - that will show in dmesg eg:
+```
+hid-generic 0003:0583:2060.0006: input,hidraw2: USB HID v1.10 Joystick [USB,2-axis 8-button gamepad] on usb-3f980000.usb-1.5/
+```
+In this case it would be ATTRS{name}=="USB,2-axis 8-button gamepad"
+
