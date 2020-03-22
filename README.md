@@ -10,7 +10,7 @@ Refer to: https://github.com/TiBeN/15khz-arcade-pkg
 
 packages base
 ```
-yum install flac-devel gcc-c++ glm-devel jack-audio-connection-kit libjpeg-turbo-devel libXi-devel libXinerama-devel lua-devel portaudio-devel portmidi-devel pugixml-devel qt5-qtbase-devel rapidjson-devel SDL2_ttf-devel sqlite-devel utf8proc-devel qt5-qtquickcontrols2-devel harfbuzz-devel harfbuzz-icu graphite2-devel libXrandr-devel
+yum install flac-devel gcc-c++ glm-devel jack-audio-connection-kit libjpeg-turbo-devel libXi-devel libXinerama-devel lua-devel portaudio-devel portmidi-devel pugixml-devel qt5-qtbase-devel rapidjson-devel SDL2_ttf-devel sqlite-devel utf8proc-devel qt5-qtquickcontrols2-devel harfbuzz-devel harfbuzz-icu graphite2-devel libXrandr-devel expat-devel fontconfig-devel zlib-devel
 ```
 
 lua 5.x
