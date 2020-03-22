@@ -55,7 +55,7 @@ BuildRequires:  SDL2_ttf-devel
 BuildRequires:  sqlite-devel
 BuildRequires:  utf8proc-devel
 BuildRequires:  zlib-devel
-Requires:       %{name2}-data = %{version}-%{release}
+Requires:       %{name}-data = %{version}-%{release}
 
 #bx and bgfx are not made to be linked to dynamically as per http://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=104437
 Provides:       bundled(bgfx)
