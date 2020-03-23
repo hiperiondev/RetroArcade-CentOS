@@ -57,7 +57,6 @@ A graphical and themeable emulator front-end that allows you to access all your 
 %build
 %cmake
 make
-#make %{?_smp_mflags}
 
 %install
 #cd build
@@ -72,8 +71,9 @@ cp -r themes %{buildroot}%{_sysconfdir}/emulationstation/
 #Doc files
 mkdir -p %{buildroot}%{_docdir}/EmulationStation/
 install -D -m 0644 *.md %{buildroot}%{_docdir}/EmulationStation/
-#install -D -m 0644 %{SOURCE2} %{buildroot}%{_docdir}/EmulationStation/README.openSUSE
 
+#Resources
+cp -r resources/ %{buildroot}/%{_bindir} 
 
 #missed desktop file, writing one
 mkdir -p %{buildroot}%{_datadir}/applications/
@@ -94,8 +94,11 @@ EOF
 
 %files
 %{_bindir}/emulationstation
+%{_bindir}/resources/
 %{_datadir}/pixmaps/es_icon.png
 %{_datadir}/applications/%{name}.desktop
+%{_libdir}/
+%{_includedir}/
 %dir %{_sysconfdir}/emulationstation/
 %dir %{_sysconfdir}/emulationstation/themes/
 %config %{_sysconfdir}/emulationstation/themes/simple/
