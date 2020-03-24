@@ -46,7 +46,7 @@ echo "%_smp_mflags -j1" >> ~/.rpmmacros
 
 download mame source
 ```
-wget wget -O ~/rpmbuild/SOURCES/mame0217s.exe https://github.com/mamedev/mame/releases/download/mame0217/mame0217s.exe
+wget -O ~/rpmbuild/SOURCES/mame0219s.exe https://github.com/mamedev/mame/releases/download/mame0219/mame0219s.exe
 ```
 
 create package
