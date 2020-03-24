@@ -97,11 +97,13 @@ EOF
 %{_bindir}/resources/
 %{_datadir}/pixmaps/es_icon.png
 %{_datadir}/applications/%{name}.desktop
-%{_libdir}/
-%{_includedir}/
+%{_libdir}/* 
+%{_includedir}/*
 %dir %{_sysconfdir}/emulationstation/
 %dir %{_sysconfdir}/emulationstation/themes/
 %config %{_sysconfdir}/emulationstation/themes/simple/
+%config %{_sysconfdir}/emulationstation/themes/crt/
+%config %{_sysconfdir}/emulationstation/themes/crt-centered/
 %config %{_sysconfdir}/emulationstation/es_systems.cfg
 %docdir %{_docdir}/EmulationStation/
 %{_docdir}/EmulationStation/
