@@ -61,23 +61,25 @@ rpmbuild -ba ~/rpmbuild/SPECS/groovymame217.spec
 packages base
 ```
 yum groupinstall -y "Development Tools"
-yum install -y alsa-lib alsa-lib-devel SDL2-devel boost-system boost-filesystem boost-date-time boost-locale freeimage-devel boost-devel freetype-devel eigen3-devel.noarch libcurl-devel mesa-libGL-devel cmake git
-
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
 
-yum install vlc-devel rapidjson-devel
-
-cd ~/rpmbuild/SOURCES/
-git clone --recursive https://github.com/RetroPie/EmulationStation.git
-
-cat EmulationStation/CMake/Packages/FindRapidJSON.cmake | iconv -f utf-8 -t ascii//TRANSLIT > EmulationStation/CMake/Packages/FindRapidJSON.cmake
-mv EmulationStation EmulationStation-master
-zip -r EmulationStation EmulationStation-master
+yum install -y alsa-lib alsa-lib-devel SDL2-devel boost-system boost-filesystem boost-date-time boost-locale freeimage-devel boost-devel freetype-devel eigen3-devel.noarch libcurl-devel mesa-libGL-devel cmake git vlc-devel rapidjson-devel
 
 yum install centos-release-scl
 yum install devtoolset-8-gcc devtoolset-8-gcc-c++
 scl enable devtoolset-8 -- bash
+```
+
+download source
+```
+cd ~/rpmbuild/SOURCES/
+git clone --recursive https://github.com/RetroPie/EmulationStation.git
+
+cat EmulationStation/CMake/Packages/FindRapidJSON.cmake | iconv -f utf-8 -t ascii//TRANSLIT > EmulationStation/CMake/Packages/FindRapidJSON.cmake
+
+mv EmulationStation EmulationStation-master
+zip -r EmulationStation EmulationStation-master
 ```
 
 build package
