@@ -51,7 +51,7 @@ wget -O ~/rpmbuild/SOURCES/mame0219s.exe https://github.com/mamedev/mame/release
 
 create package
 ```
-rpmbuild -ba ~/rpmbuild/SPECS/groovymame217.spec
+rpmbuild -ba ~/rpmbuild/SPECS/groovymame219.spec
 ```
 
 --------------------
