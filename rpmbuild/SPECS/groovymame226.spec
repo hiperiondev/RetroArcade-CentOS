@@ -1,7 +1,7 @@
 #The debug build is disabled by default, please use # --with debug to override
 %bcond_with debug
 
-%global baseversion 219
+%global baseversion 226
 %global name2 mame
 
 Name:           groovymame
@@ -23,7 +23,7 @@ Source0:        https://github.com/mamedev/%{name}/releases/download/%{name}0%{b
 Source1:        http://mamedev.org/releases/whatsnew_0%{baseversion}.txt
 Patch0:         %{name2}-fortify.patch
 Patch1:         %{name2}-genie-systemlua.patch
-Patch2:         0219_groovymame_017p.diff
+Patch2:         0226_groovymame_017s.diff
 # %%{arm}:
 # https://bugzilla.redhat.com/show_bug.cgi?id=1627625
 # %%{power64}:
@@ -380,4 +380,3 @@ find $RPM_BUILD_ROOT%{_datadir}/%{name} -name LICENSE -exec rm {} \;
 
 %files doc
 %doc docs/build/html/*
-
