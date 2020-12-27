@@ -130,8 +130,8 @@ HTML documentation for MAME.
 
 %prep
 scl enable devtoolset-8 -- bash
-pip install sphinx_rtd_theme
-pip install sphinxcontrib-svg2pdfconverter
+pip3 install sphinx_rtd_theme
+pip3 install sphinxcontrib-svg2pdfconverter
 %setup -qcT
 
 #do not extract system libs or document themes to ensure system ones are used
