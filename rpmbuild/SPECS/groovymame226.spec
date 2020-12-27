@@ -20,7 +20,7 @@ Summary:        Multiple Arcade Machine Emulator
 License:        GPLv2+ and LGPLv2+ and ASL 2.0
 URL:            http://mamedev.org/
 Source0:        https://github.com/mamedev/%{name}/releases/download/%{name}0%{baseversion}/%{name2}0%{baseversion}s.exe
-Source1:        http://mamedev.org/releases/whatsnew_0%{baseversion}.txt
+Source1:        https://mamedev.org/releases/whatsnew_0%{baseversion}.txt
 Patch0:         %{name2}-fortify.patch
 Patch1:         %{name2}-genie-systemlua.patch
 Patch2:         0226_groovymame_017s.diff
