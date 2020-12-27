@@ -54,7 +54,7 @@ BuildRequires:  zlib-devel
 BuildRequires:  centos-release-scl
 BuildRequires:  devtoolset-8-gcc
 BuildRequires:  devtoolset-8-gcc-c++
-BuildRequires:  rh-python36
+BuildRequires:  python3
 
 Requires:       %{name}-data = %{version}-%{release}
 
