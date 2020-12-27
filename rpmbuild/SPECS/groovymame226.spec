@@ -21,9 +21,9 @@ License:        GPLv2+ and LGPLv2+ and ASL 2.0
 URL:            http://mamedev.org/
 Source0:        https://github.com/mamedev/%{name}/releases/download/%{name}0%{baseversion}/%{name2}0%{baseversion}s.exe
 Source1:        https://mamedev.org/releases/whatsnew_0%{baseversion}.txt
-Patch0:         %{name2}-fortify.patch
-Patch1:         %{name2}-genie-systemlua.patch
-Patch2:         0226_groovymame_017s.diff
+Patch0:         https://raw.githubusercontent.com/hiperiondev/RetroArcade-CentOS/master/rpmbuild/SOURCES/%{name2}-fortify.patch#/%{name2}-fortify.patch
+Patch1:         https://raw.githubusercontent.com/hiperiondev/RetroArcade-CentOS/master/rpmbuild/SOURCES/%{name2}-genie-systemlua.patch#/%{name2}-genie-systemlua.patch
+Patch2:         https://raw.githubusercontent.com/hiperiondev/RetroArcade-CentOS/master/rpmbuild/SOURCES/0226_%{name}_017s.diff#/0226_%{name}_017s.diff
 # %%{arm}:
 # https://bugzilla.redhat.com/show_bug.cgi?id=1627625
 # %%{power64}:
