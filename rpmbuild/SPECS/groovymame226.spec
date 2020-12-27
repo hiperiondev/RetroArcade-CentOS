@@ -130,7 +130,6 @@ HTML documentation for MAME.
 
 %prep
 scl enable devtoolset-8 -- bash
-scl enable rh-python36 bash
 pip install sphinx_rtd_theme
 pip install sphinxcontrib-svg2pdfconverter
 %setup -qcT
