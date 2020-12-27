@@ -31,8 +31,6 @@ Patch2:         https://raw.githubusercontent.com/hiperiondev/RetroArcade-CentOS
 # https://bugzilla.redhat.com/show_bug.cgi?id=1541613
 ExcludeArch:    %{arm} %{power64}
 
-#asio in Fedora repositories is too old (1.11.x is needed)
-#BuildRequires:  asio-devel
 BuildRequires:  expat-devel
 BuildRequires:  flac-devel
 BuildRequires:  fontconfig-devel
@@ -47,23 +45,24 @@ BuildRequires:  p7zip
 BuildRequires:  portaudio-devel
 BuildRequires:  portmidi-devel
 BuildRequires:  pugixml-devel
-#BuildRequires:  python3-sphinx_rtd_theme
-#BuildRequires:  python3-sphinxcontrib-rsvgconverter
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  rapidjson-devel
 BuildRequires:  SDL2_ttf-devel
 BuildRequires:  sqlite-devel
 BuildRequires:  utf8proc-devel
 BuildRequires:  zlib-devel
+BuildRequires:  centos-release-scl
+BuildRequires:  devtoolset-8-gcc
+BuildRequires:  devtoolset-8-gcc-c++
+BuildRequires:  rh-python36
+
 Requires:       %{name}-data = %{version}-%{release}
 
 #bx and bgfx are not made to be linked to dynamically as per http://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=104437
 Provides:       bundled(bgfx)
 Provides:       bundled(bimg)
 Provides:       bundled(bx)
-#fedora contains linenoise package but it is not compatible
 Provides:       bundled(linenoise)
-#Below have no fedora packages ATM and are very tiny
 Provides:       bundled(lsqlite3)
 Provides:       bundled(luafilesystem)
 Provides:       bundled(lua-linenoise)
@@ -77,7 +76,6 @@ Provides:       bundled(softfloat)
 #ldplayer has been turned into a regular mame driver in 0.180 cycle
 Provides:       %{name}-ldplayer = %{version}-%{release}
 Obsoletes:      %{name}-ldplayer < 0.179-4
-
 
 %description
 MAME stands for Multiple Arcade Machine Emulator.  When used in conjunction
@@ -130,8 +128,11 @@ BuildArch:      noarch
 %description doc
 HTML documentation for MAME.
 
-
 %prep
+scl enable devtoolset-8 -- bash
+scl enable rh-python36 bash
+pip install sphinx_rtd_theme
+pip install sphinxcontrib-svg2pdfconverter
 %setup -qcT
 
 #do not extract system libs or document themes to ensure system ones are used
@@ -250,7 +251,6 @@ pushd docs
     %make_build html
 popd
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -318,7 +318,6 @@ rm -f docs/.buildinfo
 rm -rf docs/build/html/_sources
 
 find $RPM_BUILD_ROOT%{_datadir}/%{name} -name LICENSE -exec rm {} \;
-
 
 %files
 %config(noreplace) %{_sysconfdir}/%{name}/%{name}.ini
