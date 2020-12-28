@@ -1,6 +1,6 @@
-diff -up mame-0.215/3rdparty/genie/build/gmake.linux/genie.make.systemlua mame-0.215/3rdparty/genie/build/gmake.linux/genie.make
---- mame-0.215/3rdparty/genie/build/gmake.linux/genie.make.systemlua	2019-10-30 18:38:08.390000188 +0100
-+++ mame-0.215/3rdparty/genie/build/gmake.linux/genie.make	2019-10-30 18:44:01.284852520 +0100
+diff -up groovymame-0.226/3rdparty/genie/build/gmake.linux/genie.make.systemlua groovymame-0.226/3rdparty/genie/build/gmake.linux/genie.make
+--- groovymame-0.226/3rdparty/genie/build/gmake.linux/genie.make.systemlua	2019-10-30 18:38:08.390000188 +0100
++++ groovymame-0.226/3rdparty/genie/build/gmake.linux/genie.make	2019-10-30 18:44:01.284852520 +0100
 @@ -59,45 +59,12 @@ ifeq ($(config),release)
    LIBDEPS            +=
    LDDEPS             +=
